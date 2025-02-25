@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUN ZONE - Most Entertaining Theme Park</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- JavaScript for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Custom JS -->
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <!-- Full Video Header Section -->
+    <header>
+        <div class="header-video-container">
+            <video autoplay muted loop>
+                <source src="/images/park overview.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="header-overlay">
+                <h1>FUN ZONE</h1>
+                <p>The Most Entertaining Theme Park</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand text-white" href="#">FUN ZONE</a> -->
+            <div class="glow-text">
+                <span>F</span>
+                <span>U</span>
+                <span>N</span>
+                <span>Z</span>
+                <span>O</span>
+                <span>N</span>
+                <span>E</span>
+              </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#About-Us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experiences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dining">Leisure & Dining</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#whatsup">What's Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#info">Park Info</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#business">Business</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#characters">Park Characters</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- About Us Section -->
+    <section class="about-section">
+        <div class="about-container" id="About-Us">
+            <div class="row  align-items-center">
+                <!-- Text Content -->
+                <div class=" card-body col-md-6">
+                    <h2>About Us</h2>
+                    <p>
+                        FUN ZONE is a world-class amusement park offering thrilling rides,
+                        internationally themed zones, and unforgettable experiences. Catering to all ages, we promise
+                        fun and hospitality at every <br><br> From breathtaking rides to delightful dining experiences,
+                        FUN ZONE has everything to make your
+                        day special.
+                    </p>
+                    <span><a href="about.html" class="btn">VIEW MORE</a></span>
+                </div>
+                <!-- Image -->
+                <div class="col-md-6 about-image">
+                    <img src="/images/about us.jpeg" alt="Fun Zone Amusement Park">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- experience -->
+    <section class="experience">
+        <div id="experience" class="section highlight">
+            <h2>Experience the Thrill</h2>
+            <p style="color: black;">Discover our 7 internationally themed zones, thrilling rides, and fun for everyone!</p>
+            <div class="exp-container py-5">
+                <div class="row g-4">
+                    <!-- Card 1 (Large) -->
+                    <div class="col-lg-6">
+                        <div class="custom-card large-card" style="background-image: url('/images/water.jpg');">
+                            <div class="card-content text-start">
+                                <i class="fas fa-water"></i>
+                                <h5>Water World</h5>
+                                <p>Water fun all year round</p>
+                                <a href="#" class="action-link">To the water world</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 (Large) -->
+                    <div class="col-lg-6">
+                        <div class="custom-card large-card" style="background-image: url('/images/thrill.jpg');">
+                            <div class="card-content text-start">
+                                <i class="fas fa-landmark"></i>
+                                <h5>Thrill Rides</h5>
+                                <p>Experience the rush of the thrill rides</p>
+                                <a href="thrillRides.html" class="action-link">To the thrill rides</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="custom-card" style="background-image: url('/images/tickets.jpg');">
+                            <div class="card-content text-start">
+                                <i class="fas fa-bed"></i>
+                                <h5>Tickets</h5>
+                                <p>Buy Tickets, Create Memories!</p>
+                                <a href="ticket.html" class="action-link">More information</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="custom-card" style="background-image: url('/images/meal2.jpg');">
+                            <div class="card-content text-start">
+                                <i class="fas fa-utensils"></i>
+                                <h5>Munchies</h5>
+                                <p>The restaurant world-first</p>
+                                <a href="meal.html" class="action-link">To the innovation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="custom-card" style="background-image: url('./funzone/images/virtual.jpg');">
+                            <div class="card-content text-start">
+                                <i class="fas fa-vr-cardboard"></i>
+                                <h5>GameOn</h5>
+                                <p>Explore virtual worlds</p>
+                                <a href="games.html" class="action-link">To the VR experience centre</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 (Large) -->
+                    <div class="col-lg-6">
+                        <div class="custom-card large-card" style="background-image: url('/images/events.jpg');">
+                            <div class="card-content text-start">
+                                <i class="fas fa-calendar-alt"></i>
+                                <h5>Events</h5>
+                                <p>From comedy to classic evening events and cinema</p>
+                                <a href="#" class="action-link">More information</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 7 (Large) -->
+                    <div class="col-lg-6">
+                        <div class="custom-card large-card" style="background-image: url('/images/conference.jpg');">
+                            <div class="card-content text-start">
+                                <i class="fas fa-briefcase"></i>
+                                <h5>Confertainment</h5>
+                                <p>Conferences and events</p>
+                                <a href="#" class="action-link">To the Confertainment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- leisure and dining Sections -->
+    <section class="leisure-dining">
+        <div id="dining" class="section highlight mt-5">
+                <h2>Leisure & Dining</h2>
+            <div class="text-center mt-3">
+                <p class="text-muted">Explore our food court with outlets offering global cuisines <a
+                        href="meal.html" class="text-danger fw-bold">visit here</a>.</p>
+            </div>
+            <div class="row">
+                <!-- Left Side: Video -->
+                <div class="col-md-8 video-box">
+                    <video autoplay muted loop  width="100%" height="100%">
+                        <source src="/images/dinnig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Right Side: Two Images -->
+                <div class="col-md-4 right-column">
+                    <div class="image-box">
+                        <img src="/images/meal1.jpg" alt="Image 1" class="img-fluid">
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/cf.jpg" alt="Image 2" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- line bar -->
+    <section class="line-bar">
+        <div class="container-fluid info-section">
+            <div class="container">
+                <div class="row">
+                    <!-- 100% ORIGINAL -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="info-box">
+                            <i class="fas fa-award"></i>
+                            <div class="info-text">
+                                <h5>100% FUN</h5>
+                                <p>100% Fun Guaranteed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Quality Guaranty -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="info-box something">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="info-text">
+                                <h5>QUALITY GUARANTEE</h5>
+                                <p>100% Guaranteed Products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Support 24/7 -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="info-box">
+                            <i class="fas fa-headset"></i>
+                            <div class="info-text">
+                                <h5>SUPPORT 24/7</h5>
+                                <p>Always available to answer your Questions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Free Returns -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="info-box">
+                            <i class="fas fa-undo"></i>
+                            <div class="info-text">
+                                <h5>FREE PARKING</h5>
+                                <p>Free parking area for all</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- events -->
+    <section class="events">
+        <div id="whatsup" class="section highlight">
+            <h2>What's Up</h2>
+            <p>Check out our past and upcoming events.</p>
+            <!-- Carousel -->
+            <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="carousel-caption">
+                            <h1>Ferris Wheel Event</h1>
+                            <p>Experience breathtaking views from the tallest Ferris wheel in town. Join us on March
+                                15th,
+                                2024!</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <h1>Fireworks Spectacular</h1>
+                            <p>End your day with a dazzling fireworks show. Happening every Saturday night in April!</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <h1>Water Park Festival</h1>
+                            <p>Cool off with water rides, food trucks, and fun. May 1st - May 10th, 2024!</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <h1>Birthday Party</h1>
+                            <p>Celebrate Your Special Day at Fun Zone!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="business-opportunities">
+        <div id="business" class="section highlight">
+            <h2>Business Opportunities</h2>
+            <p>Partner with us for exciting ventures.</p>
+        </div>
+        <!-- opportunities section -->
+        <div class="opportunities-container d-flex">
+            <div class="text">
+                <h2> WHERE FUN MEETS PROFITS! </h2>
+                <p>"Unlock a world of revenue opportunities at our amusement park, featuring ticket sales, VIP
+                    experiences, food and beverage concessions, merchandise shops, birthday party packages, corporate
+                    event rentals, sponsorships, special events, seasonal festivals, live concerts, character
+                    meet-and-greets, and photography services, all designed to maximize profits, drive business growth,
+                    and create unforgettable experiences for visitors of all ages."</p>
+            </div>
+            <div id="carouselExampleAutoplaying" class="carousel slide d-flex" data-bs-ride="carousel">
+                <div class="carousel-images carousel-inner">
+                    <div class=" carousel-item active">
+                        <img src="/images/opportunties-2.jpeg" class=" w-100" alt="image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/oppotunities-1.jpg" class=" w-100 " alt="image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/opportunities-3.jpeg" class=" w-100" alt="image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/opportunities-4.jpeg" class=" w-100" alt="image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/opportunities-5.jpeg" class=" w-100" alt="image">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Park Information Section -->
+    <section class="park-info-section py-5">
+        <div class="container" id="info">
+            <h1 class="text-center mb-5">Park Information</h1>
+            <div class="row g-4">
+                <!-- Left Column -->
+                <div class="col-lg-8">
+                    <div class="info-card bg-light p-4 shadow rounded">
+                        <h2 class="mb-3">Explore the Beauty of Nature</h2>
+                        <p>Escape to a world of natural beauty and endless excitement, where lush green trails beckon
+                            exploration, serene picnic spots invite relaxation, and a wide range of activities promise
+                            unforgettable fun for the entire family.
+
+                            Whether you're looking to unwind and rejuvenate amidst nature's splendor, or embark on a
+                            thrilling adventure that will leave you breathless, our park has something for everyone
+                            .<br><br>
+
+                            Discover hidden gems along our winding trails, enjoy quality time with loved ones at our
+                            picturesque picnic spots, or challenge yourself with our exciting array of activities,
+                            including:
+                        </p>
+                        <ul class="list-unstyled mt-4">
+                            <li>🌳 **Nature Trails**: Enjoy peaceful walks through our scenic trails.</li>
+                            <li>⛲ **Picnic Spots**: Relax by our fountains and enjoy a day with family.</li>
+                            <li>🎠 **Fun Rides**: Thrilling activities for kids and adults alike.</li>
+                            <li>📸 **Photo Spots**: Capture beautiful memories at iconic locations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column: Upcoming Events & Visitor Guidelines -->
+                <div class="col-lg-4">
+                    <!-- Upcoming Events Card -->
+                    <div class="info-card-1 bg-light p-3 mb-4 shadow rounded" style="border: 2px solid #FF6347;">
+                        <h3 class="mb-3 text-center">Upcoming Events</h3>
+                        <ul class="list-unstyled">
+                            <li><strong>🌟 Nature Walk:</strong> Dec 10, 9:00 AM</li>
+                            <li><strong>🎵 Music Festival:</strong> Dec 15, 6:00 PM</li>
+                            <li><strong>🎨 Art Workshop:</strong> Dec 18, 11:00 AM</li>
+                            <li><strong>🎄 Christmas Carnival:</strong> Dec 25, All Day</li>
+                        </ul>
+                    </div>
+
+                    <!-- Visitor Guidelines Card -->
+                    <div class="info-card-2 bg-light p-3 shadow rounded" style="border: 2px solid #FF6347;">
+                        <h3 class="mb-3 text-center">Visitor Guidelines</h3>
+                        <ul class="list-unstyled">
+                            <li>🚶‍♂️ Stay on marked trails.</li>
+                            <li>🚯 No littering allowed.</li>
+                            <li>🐾 Pets must be on a leash.</li>
+                            <li>🔥 No open fires.</li>
+                            <li>🎶 Keep noise levels to a minimum.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Text Section -->
+            <div class="text-center mt-5">
+                <p class="text-muted">Want to know more about group discounts or special offers? <a
+                        href="ticket.html" class="text-danger fw-bold">visit here</a>.</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- contact us -->
+    <section class="contact-us">
+        <!-- location -->
+        <h1>Easy to Find, Hard to Leave!</h1>
+        <div class="map-container">
+            <!-- Google Maps Embed Code -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13218.370013810876!2d73.047884!3d33.684422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbd4b0b2a2e13%3A0x4118b2c8c4606b3d!2sIslamabad%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1697882426743!5m2!1sen!2sus"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+    <!-- footer and the end of the website -->
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+                <!-- About Company -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">ABOUT FUN ZONE</h5>
+                    <p>
+                        Welcome to the Fun Zone Amusement Park, where laughter, excitement, and unforgettable memories come to life!
+                    </p>
+                    <p>
+                        Join us and make every visit an extraordinary experience!"
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" class="text-white me-3" target="_blank"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://dribbble.com" class="text-white me-3" target="_blank"><i
+                                class="bi bi-dribbble"></i></a>
+                        <a href="https://twitter.com" class="text-white me-3" target="_blank"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="https://google.com" class="text-white" target="_blank"><i class="bi bi-google"></i></a>
+                    </div>
+                </div>
+                <!-- Search Something -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">SEARCH SOMETHING</h5>
+                     <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search"> 
+                    </div> 
+                    <p><i class="bi bi-geo-alt-fill"></i> Islamabad, 00-967, Pakistan</p>
+                    <p><i class="bi bi-envelope-fill"></i> contact@example.com</p>
+                    <p><i class="bi bi-telephone-fill"></i> +92 234 567 88</p>
+                </div>
+                <!-- Opening Hours -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">OPENING HOURS</h5>
+                    <p>Mon - Thu: <span class="float-end">8am - 9pm</span></p>
+                    <hr>
+                    <p>Fri - Sat: <span class="float-end">8am - 1am</span></p>
+                    <hr>
+                    <p>Sunday: <span class="float-end">9am - 10pm</span></p>
+                    <hr>
+                </div>
+            </div>
+            <div class="text-center mt-4 copyright">
+                <p>&copy; 2024 Copyright: All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ask a question -->
+    <!-- Chat Box -->
+    <button class="chat-button" id="chatButton">Have a Question?</button>
+    <section class="live-chat">
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                Fun ZONE - Live Chat
+                <button class="btn-close btn-close-white float-end" aria-label="Close" id="closeChat"
+                    style="margin-right: -8px; margin-top: -4px;"></button>
+            </div>
+            <div class="chat-body">
+                <img src="/images/pexels-brett-sayles-9708620.jpg" alt="i am an Image "
+                    style="width: 100%; height: 100%; object-fit: cover;  border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <p><strong>Welcome to Fun Zone!</strong> I'm here to assist you <br>I can help answer questions
+                    regarding tickets, hours of operation, amenities, policies, and much more. What can I help you find
+                    today?</p>
+                <p>How can I help you today?</p>
+            </div>
+            <div class="chat-footer">
+                <input type="text" placeholder="Type your message..." id="userMessage">
+                <button class="mt-2" id="sendMessage">Send</button>
+            </div>
+        </div>
+        <!-- Bootstrap Modal -->
+        <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="messageModalLabel">Message Sent</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalMessageContent">
+                        <!-- Message  here -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="arrow-up">
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTop">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+    </section>
+    <!-- park character -->
+    <section class="character">
+        <div id="park-character" class="character-container">
+            <img src="/images/bunny the bear.png" alt="Park Character" class="character-img">
+        </div>
+
+        <!-- Pop-up Modal -->
+        <div id="character-popup" class="character-popup">
+            <div class="popup-content">
+                <span id="popup-close" class="close-icon">&times;</span>
+                <h3 class="popup-title">Meet Benny the Bear! 🐻</h3>
+                <p>Benny is our park mascot! He loves greeting visitors and sharing fun stories about the park.
+                    Don't forget
+                    to say hi to Benny when you visit!</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tickets</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background: linear-gradient(100deg, #b1ecd1, #a6dff1);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .ticket-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .ticket-card img {
+            border-bottom: 5px solid #FF6347;
+        }
+
+        .ticket-card h5 {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .btn-primary {
+            background-color: #FF6347;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffa726;
+        }
+
+        .offers-section {
+            /* background-color: #f0f4f9; */
+            padding: 50px 20px;
+        }
+
+        .offer-box {
+            text-align: center;
+            color: #334;
+        }
+
+        .offer-box i {
+            font-size: 40px;
+            color: #0062cc;
+        }
+
+        .offer-box h6 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .offer-box p {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .offer-box a {
+            text-decoration: none;
+            color: #946b2d;
+        }
+
+        .offer-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* games and vr section */
+        .vr-section {
+            margin-top: 30px;
+            background: url('../images/vr-1.jpeg') no-repeat center center/cover;
+            color: white;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .vr-section .vr-card {
+            background: white;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .vr-section .vr-card h6 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .vr-section .vr-card .btn {
+            background-color: #FF6347;
+            border: none;
+        }
+
+        .vr-section .vr-card .btn:hover {
+            background-color: #c89e2c;
+        }
+
+        /* rides and thrill section */
+        .ride-section {
+            margin-top: 30px;
+            background: url('../images/thrill.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .ride-section .r-card {
+            background: white;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .ride-section .r-card h6 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .ride-section .r-card .btn {
+            background-color: #FF6347;
+            border: none;
+        }
+
+        /* Birthday section */
+        .birth-section {
+            margin-top: 30px;
+            background: url('../images/b-1.jpeg') no-repeat center center/cover;
+            color: white;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .birth-section .bday-card {
+            background: white;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .birth-section .bday-card h6 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .offer-box {
+            text-align: center;
+            color: #334;
+        }
+
+        .birth-section .bday-card .btn {
+            background-color: #d4af37;
+            border: none;
+        }
+
+        /* offer section */
+        .offers-section {
+            padding: 50px 20px;
+        }
+
+        .offer-box i {
+            font-size: 40px;
+            color: #0062cc;
+        }
+
+        .offer-box h6 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .offer-box p {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .offer-box a {
+            text-decoration: none;
+            color: #946b2d;
+        }
+
+        .offer-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* important information  */
+        .info-box {
+            padding: 30px;
+            background-color: #e1ecf7;
+            margin: 20px auto;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            line-height: 20px;
+        }
+
+        .info-box h5 {
+            font-weight: bold;
+        }
+
+        .info-box i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        /* kids free ticket */
+        .birthday-box {
+            background-image: url('../images/free-ticket.jpg');
+            background-size: cover;
+            border-radius: 10px;
+            padding: 80px;
+            text-align: center;
+            margin: 30px auto;
+            justify-items: center;
+            width: 70%;
+        }
+
+        .birthday-box h3 {
+            font-weight: bold;
+            color: #004085;
+        }
+
+        .birthday-box i {
+            font-size: 20px;
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px 0;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        /* Footer Headings */
+        footer h5 {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* Social Media Icons */
+        footer .social-icons a {
+            font-size: 20px;
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #007bff;
+        }
+
+        /* Footer Text */
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Copyright Section */
+        footer .copyright {
+            padding: 10px 0;
+            margin-top: 20px;
+            border-top: 2px solid #6c757d;
+            font-size: 14px;
+            color: #adb5bd;
+        }
+
+        /* Horizontal Line */
+        footer hr {
+            border-color: #6c757d;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Offers Section -->
+    <div class="offers-section">
+        <div class="container">
+            <h2 class="text-center">Tickets & Offers</h2>
+            <p class="text-center mb-5">Discover Fun Zone packages, tickets, and offers for your family, group, or
+                school class!</p>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="offer-box">
+                        <i class="fas fa-ticket-alt"></i>
+                        <h6>Single Tickets</h6>
+                        <p>With or without an overnight stay</p>
+                        <a href="#impInfo">More info</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="offer-box">
+                        <i class="fas fa-wheelchair"></i>
+                        <h6>Special Rates</h6>
+                        <p>For guests with disabilities</p>
+                        <a href="#impInfo">More info</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="offer-box">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h6>Ticket Exchange</h6>
+                        <p>Exchange an undated ticket</p>
+                        <a href="#impInfo">More info</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="offer-box">
+                        <i class="fas fa-gift"></i>
+                        <h6>Voucher Ticket</h6>
+                        <p>Give the gift of fun</p>
+                        <a href="#impInfo">More info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ticket Section -->
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Ticket Card 1 -->
+            <div class="col-md-4">
+                <div class="card ticket-card">
+                    <img src="../images/t-1.jpeg" class="card-img-top" alt="1-Day Ticket">
+                    <div class="card-body text-center">
+                        <h5>1-Day Admission Ticket</h5>
+                        <p>Adults: $50 | Children: $40</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingForm">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Ticket Card 2 -->
+            <div class="col-md-4">
+                <div class="card ticket-card">
+                    <img src="../images/t-1.jpeg" class="card-img-top" alt="2-Day Ticket">
+                    <div class="card-body text-center">
+                        <h5>2-Day Admission Ticket</h5>
+                        <p>Adults: $90 | Children: $70</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingForm">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Ticket Card 3 -->
+            <div class="col-md-4">
+                <div class="card ticket-card">
+                    <img src="../images/t-1.jpeg" class="card-img-top" alt="Family Pack">
+                    <div class="card-body text-center">
+                        <h5>Family Pack</h5>
+                        <p>$180 for 4 People</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingForm">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Form Modal -->
+    <div class="modal fade" id="bookingForm" tabindex="-1" aria-labelledby="bookingFormLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingFormLabel">Book Your Ticket</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="ticketForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ticketType" class="form-label">Ticket Type</label>
+                            <select class="form-select" id="ticketType" required>
+                                <option value="1-Day Admission">1-Day Admission</option>
+                                <option value="2-Day Admission">2-Day Admission</option>
+                                <option value="Family Pack">Family Pack</option>
+                                <option value="MultiX Virtual Reality">MultiX Virtual Reality 3in1</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MultiX VR Section -->
+    <div class="vr-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2 class="text-uppercase">MultiX Virtual Reality 3in1</h2>
+                    <p class="lead">With the MultiX Virtual Reality, you can enjoy our three unique VR experiences in
+                        one day.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card vr-card p-3">
+                        <img src="../images/virtual.jpg" class="card-img-top" alt="MultiX Virtual Reality">
+                        <div class="card-body text-center">
+                            <h6>MultiX Virtual Reality 3in1</h6>
+                            <p>Ticket (12+): €14.00</p>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#bookingForm">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Rides and slide Section -->
+    <div class="ride-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2 class="text-uppercase">Rides and Slides</h2>
+                    <p class="lead">SLIP, SLIDE, AND SMILE: Fun Zone's Got the Best Rides & Slides</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card r-card p-3">
+                        <img src="../images/r-st.jpeg" class="card-img-top" alt="rides and slides Reality">
+                        <div class="card-body text-center">
+                            <h6>Double the Fun</h6>
+                            <p>Ticket (12+): €14.00</p>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#bookingForm">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- birthdays section -->
+    <div class="birth-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2 class="text-uppercase">Kids Birthday Blast</h2>
+                    <p class="lead">Create Unforgettable Memories with Friends, Food, and Endless Fun!</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bday-card p-3">
+                        <img src="../images/b-t2.jpeg" class="card-img-top" alt="rides and slides Reality">
+                        <div class="card-body text-center">
+                            <h6>Celebrate in Style</h6>
+                            <p>Ticket (12+): €14.00</p>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#bookingForm">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Success Popup -->
+    <div class="modal fade" id="successPopup" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <h5 class="text-success">Success!</h5>
+                <p>Your ticket has been successfully booked.</p>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <!-- important information -->
+    <div class="container mt-5" id="impInfo">
+        <h2>Important Information</h2>
+        <!-- First Section -->
+        <div class="info-box">
+            <h5><i class="fas fa-sync-alt"></i> Free tickets, voucher tickets and tickets from previous seasons</h5>
+            <ul>
+                <li>Tickets without a specific date must be dated before visiting at fun zone website.</li>
+                <li>When dating your tickets, you may be charged a surcharge if the valid admission price at that time
+                    is higher than the purchase price of the tickets.</li>
+                <li>If the tickets are not dated at admissions check, entry to FunZone-Park cannot be guaranteed. A
+                    service fee of <strong>€10</strong> per ticket will be charged for subsequent on-site dating.</li>
+                <li>Please note the expiry date of tickets and vouchers.</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h5><i class="fas fa-hourglass-half"></i> Limitation of FunZone-Park tickets and vouchers</h5>
+            <p>The Pakistan regular limitation period applies: undated tickets and voucher tickets are valid for a
+                further three full years from the date of purchase, until the end of the year. Free tickets can only be
+                used during the specified season. After the specified season has ended, the free tickets are no longer
+                valid and cannot be used.</p>
+        </div>
+
+        <div class="info-box">
+            <h5><i class="fas fa-snowflake"></i> Evening ticket during the Summer & Winter season</h5>
+            <p>There is no surcharge when purchasing the evening ticket at the Europa-Park box office. The evening
+                ticket is available from 04.11.2024 to 12.01.2025 (except 24/25.12.2024) and allows entry to
+                FunZone-Park from 4pm.</p>
+            <p><strong>Offer period 2024/2025:</strong></p>
+            <ul>
+                <li>04.11.2024 – 20.12.2024: €37.00</li>
+                <li>21.12.2024 – 06.01.2025: €42.00</li>
+                <li>07.01.2025 – 12.01.2025: €37.00</li>
+            </ul>
+        </div>
+        <!-- kids free ticket -->
+        <div class="birthday-box">
+            <i class="fas fa-heart"></i>
+            <h3>Free entry for birthday children</h3>
+            <p>Up to and including on their 12th birthday, children celebrating their birthday on the day of visit
+                receive free entry to FunZone-Park when they present a valid ID!</p>
+        </div>
+    </div>
+    <!-- footer and the end of the website -->
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+                <!-- About Company -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">ABOUT FUN ZONE</h5>
+                    <p>
+                        Welcome to the Fun Zone Amusement Park, where laughter, excitement, and unforgettable memories
+                        come to life!
+                    </p>
+                    <p>
+                        Join us and make every visit an extraordinary experience!"
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" class="text-white me-3" target="_blank"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://dribbble.com" class="text-white me-3" target="_blank"><i
+                                class="bi bi-dribbble"></i></a>
+                        <a href="https://twitter.com" class="text-white me-3" target="_blank"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="https://google.com" class="text-white" target="_blank"><i class="bi bi-google"></i></a>
+                    </div>
+                </div>
+                <!-- Search -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">SEARCH SOMETHING</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <p><i class="bi bi-geo-alt-fill"></i> Islamabad, 00-967, Pakistan</p>
+                    <p><i class="bi bi-envelope-fill"></i> contact@example.com</p>
+                    <p><i class="bi bi-telephone-fill"></i> +92 234 567 88</p>
+                </div>
+                <!-- Opening Hours -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">OPENING HOURS</h5>
+                    <p>Mon - Thu: <span class="float-end">8am - 9pm</span></p>
+                    <hr>
+                    <p>Fri - Sat: <span class="float-end">8am - 1am</span></p>
+                    <hr>
+                    <p>Sunday: <span class="float-end">9am - 10pm</span></p>
+                    <hr>
+                </div>
+            </div>
+            <div class="text-center mt-4 copyright">
+                <p>&copy; 2024 Copyright: All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Handle form submission
+            $('#ticketForm').on('submit', function (e) {
+                e.preventDefault();
+                $('#bookingForm').modal('hide'); // Close the booking form
+                setTimeout(() => {
+                    $('#successPopup').modal('show'); // Show success popup
+                }, 500);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

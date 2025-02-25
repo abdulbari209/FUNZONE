@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form Validation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styling */
+        body {
+            background-image: url(../images/contact.png) ;
+            height: 100vh;
+            background-size: cover;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 20px rgba(300, 18, 18, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .success {
+            color: #FF6347;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-container h2 {
+            color: #FF6347;
+        }
+
+        .btn {
+            background: #FF6347;
+            color: #fff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container form-container mt-3">
+        <h2 class="text-center mb-4">Contact Form</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control">
+                <small class="text-danger" id="name-error"></small>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control">
+                <small class="text-danger" id="email-error"></small>
+            </div>
+    
+            <div class="form-group">
+                <label for="number">Contact Number</label>
+                <input type="number" id="number" class="form-control">
+                <small class="text-danger" id="number-error"></small>
+            </div>
+    
+            <div class="form-group">
+                <label for="Textarea" class="form-label">Comment</label>
+                <textarea class="form-control" id="Textarea" placeholder="Enter your comments"></textarea>
+            </div>
+    
+            <button type="submit" class="btn  btn-block">Submit</button>
+            <div class="text-success text-center mt-3" id="form-success"></div>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#contact-form').on('submit', function (event) {
+                event.preventDefault()
+                
+  
+                $('.text-danger').text('');
+                $('#form-success').text('');
+    
+                let isValid = true;
+    
+                const name = $('#name').val().trim();
+                if (name.length < 3) {
+                    $('#name-error').text('Please enter at least 3 characters.');
+                    isValid = false;
+                }
+    
+
+                const email = $('#email').val().trim();
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    $('#email-error').text('Please enter a valid email address.');
+                    isValid = false;
+                }
+    
+                // Number validation (exactly 11 digits)
+                const number = $('#number').val().trim();
+                if (number.length !== 11 || isNaN(number)) {
+                    $('#number-error').text('Please enter a valid 11-digit number.');
+                    isValid = false;
+                }
+                if (isValid) {
+                    $('#form-success').text('Your query has been successfully submitted!');
+                    $('#contact-form')[0].reset(); // Reset the form
+                }
+            });
+        });
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
